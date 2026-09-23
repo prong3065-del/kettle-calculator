@@ -69,7 +69,7 @@ class KettleCalculator:
         self.combo_material.grid(row=5, column=1, pady=5, padx=10)
 
         # Кнопка расчета
-        self.btn_calc = ttk.Button(self.main_frame, text="🔥 Рассчитать время", command=self.calculate, style="Accent.TButton")
+        self.btn_calc = ttk.Button(self.main_frame, text=" Рассчитать время", command=self.calculate, style="Accent.TButton")
         self.btn_calc.pack(fill=tk.X, pady=15)
 
         # Результат
@@ -89,12 +89,8 @@ class KettleCalculator:
         self.btn_start_timer = ttk.Button(timer_btn_frame, text="▶ Запустить", command=self.confirm_start_timer)
         self.btn_start_timer.pack(side=tk.LEFT, padx=5)
 
-        self.btn_stop_timer = ttk.Button(timer_btn_frame, text="⏹ Стоп", command=self.stop_timer, state=tk.DISABLED)
+        self.btn_stop_timer = ttk.Button(timer_btn_frame, text=" Стоп", command=self.stop_timer, state=tk.DISABLED)
         self.btn_stop_timer.pack(side=tk.LEFT, padx=5)
-
-        # Подсказка
-        ttk.Label(self.main_frame, text="💡 Совет: ползунки исключают ошибки ввода запятых/точек", 
-                  font=("Arial", 8), foreground="gray").pack(side=tk.BOTTOM, pady=(5, 2))
 
         # 👤 Подпись автора
         ttk.Label(self.main_frame, 
